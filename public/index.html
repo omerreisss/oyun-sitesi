@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Oyun Sitesi</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="client.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Oyun Sitesi</h1>
+</header>
+
+<section class="games">
+  <h2>Oyunlar</h2>
+  <div class="game-list">
+    <div class="game-item">
+      <img src="images/uno.jpg" alt="UNO">
+      <p>UNO</p>
+    </div>
+    <div class="game-item">
+      <img src="images/rock-paper-scissors.jpg" alt="Taş Kağıt Makas">
+      <p>Taş-Kağıt-Makas</p>
+    </div>
+    <div class="game-item">
+      <img src="images/chess.jpg" alt="Satranç">
+      <p>Satranç</p>
+    </div>
+  </div>
+</section>
+
+<section class="rooms">
+  <h2>Odalar</h2>
+  <div id="room-list">
+    <!-- Odalar buraya otomatik gelecek -->
+  </div>
+</section>
+
+<script>
+function updateRooms(rooms) {
+  const list = document.getElementById('room-list');
+  list.innerHTML = '';
+  rooms.forEach(room => {
+    const a = document.createElement('a');
+    a.href = `room.html?room=${room.room}`;
+    a.className = 'room';
+    a.textContent = `Oda ${room.room} - ${room.count}/4 Kişi`;
+    list.appendChild(a);
+  });
+}
+</script>
+
+</body>
+</html>

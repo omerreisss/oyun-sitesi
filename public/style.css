@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #34344e);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00f2ff;
+  text-shadow: 0 0 10px #00f2ff;
+}
+
+.games, .rooms, .chat-box {
+  background: #2c2c3e;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+.games h2, .rooms h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #00f2ff;
+}
+
+.game-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.game-item {
+  background: #44445a;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+  background: #555571;
+}
+
+.game-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.game-item p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+#room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room {
+  background: #44445a;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.room:hover {
+  background: #00f2ff;
+  color: #2c2c3e;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #1e1e2f;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#messages div {
+  margin-bottom: 10px;
+}
+
+#message-form {
+  display: flex;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 1rem;
+}
+
+#message-form button {
+  padding: 10px 20px;
+  background: #00f2ff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#message-form button:hover {
+  background: #00c2cc;
+}
